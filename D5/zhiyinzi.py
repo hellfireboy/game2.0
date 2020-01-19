@@ -1,20 +1,17 @@
 # 输入任意一个大于2的数，对该数进行分解质因数。
-from math import sqrt
-
-from math import sqrt
-
+over = False
 x = int(input('输入一个大于2的数：'))
-for i in range(2, x + 1):
-    flag = True
-    for j in range(2, i + 1):
-        if i % j == 0 and i != j:
-            print(i, end='\t')
-            x /= j
-            flag = False
+while over != True:
+    for i in range(2, x + 1):
+        if i == x:
+            over = True
+            print(i)
             break
-        if j == i and flag == True:
-            print(i, end='\t')
 
+        if x % i == 0:
+            print(i, end="\t")
+            x = x // i
+            break
 # flag = False
 # x = int(input("输入一个大于2的数，下面会显示它的质因数:"))
 # print('[', end=' ')

@@ -5,7 +5,7 @@ def f12():
 
 
 # for item in f12():
-    # print(item)
+# print(item)
 print(f12())
 
 
@@ -15,6 +15,7 @@ def f123():
     yield 3
 
 
+print(tuple(f123()))
 for item in f123():  # 1, 2, and 3, will be printed
     print(item)
 
